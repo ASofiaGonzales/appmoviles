@@ -1,4 +1,7 @@
-const hayAlgunNegativo = [2,-3,9];
+var numeros = [2,-3,9];
 
-const even = (element) => element < 0;
-console.log(hayAlgunNegativo.some(even));
+function hayAlgunNegativo (numero) {
+    return numero < 0;
+} 
+
+console.log(numeros.some(hayAlgunNegativo));

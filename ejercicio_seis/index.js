@@ -1,9 +1,9 @@
-const isBelowThreshold = (currentValue) => currentValue <= 4;
+const notas = [[8,6,2,4],[7,9,4,5],[6,2,4,2],[9,6,7,10]];
 
-const notas = ([[8,6,2,4],[7,9,4,5],[6,2,4,2],[9,6,7,10]]);
+function aprobo(nota){
+    return nota >= 4;
+}
 
-const result = notas.filter(isBelowThreshold => isBelowThreshold = false);
+var quienesAprobaron = notas.filter(a => a.every(aprobo));
 
-console.log(result);
-
-//incompleto
+console.log(quienesAprobaron);

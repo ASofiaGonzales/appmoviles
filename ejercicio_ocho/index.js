@@ -1,8 +1,6 @@
-const cuantosCumplen = [7,9,25,42];
-const even = (element) => element % 2 === 0;
-console.log(cuantosCumplen.some(even));
+function cuantosCumplen (lista){
+    parImpar = lista.filter (numero => numero % 2 === 0);
+    return parImpar.length;
+    }
 
-for (let i in even,[7,9,25,42])
-{
-    console.log(i);
-}
+console.log(cuantosCumplen([7,9,25,42]));
