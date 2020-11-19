@@ -1,4 +1,5 @@
-import React from 'react';  
+import React from 'react'; 
+import logo from './logo.gif';
 import './App.css';
 
 const request = require('request-promise');
@@ -30,13 +31,7 @@ handlerBtn = () => {
                 console.log(this.state);
             });
              }
-numberList = () => {
-              return(<ul><li>{this.state.personaje.gender}</li>
-              <li>{this.state.personaje.gender}</li>
-              <li>{this.state.personaje.height}</li>
-              <li>{this.state.personaje.mass}</li>
-              <li>{this.state.inputField}</li></ul>)
-              }
+
       updateInputValue(evt) {
 
           this.setState ({inputField: evt.target.value});
@@ -46,16 +41,16 @@ numberList = () => {
   return (
      <div className="App">
        <header className="App-header">
-         <h1>Elige un numero y ¡Adivina el personaje de Star Wars!</h1>
+           <img src={logo} className= "App.logo"alt ="logo" />
+         <h2>Elige un número y ¡Adivina el personaje de Star Wars!</h2>
          <input type="text" onChange={ this.updateInputValue} onKeyPress={this.handlerPress} placeholder='Ingrese un número' />
           <button onClick={this.handlerBtn}> Adivinar </button>
           {this.state.personaje &&   <div> 
-              <h2>Nombre del personaje: {this.state.personaje.name}</h2>
-              <ul>
-                  <li>Género: {this.state.personaje.gender}</li>
-                  <li>Su altura es: {this.state.personaje.height} cm</li>
-                  <li>Su peso es: {this.state.personaje.mass} kg</li>
-                  </ul>
+              <h3>El personaje es: {this.state.personaje.name}</h3>
+              
+                  <p>Género: {this.state.personaje.gender}</p>
+                  <p>Su altura es: {this.state.personaje.height} cm</p>
+                  <p>Su peso es: {this.state.personaje.mass} kg</p>
                   </div>  
                   }
                   </header>
